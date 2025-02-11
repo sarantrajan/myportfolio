@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>saran-home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    transition: background-color 0.5s;
+    transition: margin-left .5s;
+    height: 6vh;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4P3Dh66UrRWFCeOUtJXxFy-GR80AohkKIIo2nM0f4mipK8uavTN9fX06qcQ&s);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+p{
+  font-size: 30px;
+  text-align: center;
+}
+
+h1:hover,p:hover{
+    color: yellow;
+}
+.contact{
+  width: 450px;
+  padding: 0;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0.2, 0.2);
+}
+input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+}
+textarea{
+  resize: none;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+}
+#submit{
+  border-radius: 10px;
+  font-size: medium;
+  padding: 10px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+#toggle{
+  border: none;
+  background: none;
+  float: right;
+  font-size: 24px;
+}
+img{
+  margin-left: 525px;
+  margin-top: 15px;
+  border-radius: 50%;
+}
+.myid{
+  text-align: center;
+  font-size: 40px;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+  background-image: none;
+}
+.dark-mode button{
+  color: white;
+  background: none;
+  border: solid white;
+}
+.dark-mode .contact{
+  border: solid white;
+  border-radius: 20px;
+}
+@media screen and (max-width: 600px) {
+    /* Adjust heading and paragraph sizes */
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .myid {
+        font-size: 30px;
+    }
+    span{
+      margin-right: 360px;
+    }
+    /* Adjust navigation for mobile */
+    .sidenav {
+        width: 0;
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 25px;
+        padding: 10px 10px;
+    }
+
+    .sidenav .closebtn {
+        font-size: 30px;
+        right: 15px;
+    }
+
+    /* Ensure button visibility */
+    button {
+        font-size: 20px;
+    }
+
+    /* Adjust body padding */
+    body {
+        padding: 10px;
+        text-align: center;
+    }
+    img{
+      margin-left: 5px;
+    }
+}
+
+</style>
+</head>
+<body>
+  <button id="toggle" onclick="myFunction()"><i class="fa-solid fa-toggle-off"></i></button>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="#About">About</a>
+    <a href="saran-resume.html">Resume</a>
+    <a href="#contact">Contact Me</a>
+</div>
+<div id="main">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<h1>T.SARAN</h1><br>
+<p>Web Designer</p>
+<img src="saranphoto.jpg" alt="Primary Image" class="primary">
+<br><br><br>
+<h1 id="About">About</h1><br>
+<p>Hi, I am Saran.  I'm a web Developer.<br>
+  I see myself as a cofident person who can overcome among worst and toughest situations.<br>
+  And dare to face the problems with my skills and ideas.<br>On a personal with my  skils and ideas.<br>
+  On a personal front,  I make friends easily and obey superiors.</p>
+</div>
+<br>
+<br>
+<center>
+<div class="contact" id="contact">
+<h1><b>Contact Us</b></h1><br><br>
+<form action="index.html" method="POST">
+<label for="name">Name:</label><br>
+<input type="text" id="name" placeholder="Enter Name"><br><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email" placeholder="Enter email"><br><br>
+<label for="message">Message:</label><br>
+<textarea placeholder="Enter your message"></textarea><br><br>
+<button id="submit" onclick="sendForm()">Submit</button><br><br>
+</form>
+</div></center><br><br>
+<div class="myid">
+<a href="https://www.linkedin.com/in/saran-rajan-661937323/"><i class="fa-brands fa-linkedin"></i></a>
+<a href="https://github.com/sarantrajan"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.instagram.com/_saran.thiyagu.22_/"><i class="fa-brands fa-instagram"></i></a>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+function sendForm() {
+            const formData = new FormData(document.getElementById("contact"));
+
+            fetch("contact.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error("Error:", error));
+        }
+</script>
+</body>
+</html>
