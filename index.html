@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>saran-home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    transition: background-color 0.5s;
+    transition: margin-left .5s;
+    height: 6vh;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4P3Dh66UrRWFCeOUtJXxFy-GR80AohkKIIo2nM0f4mipK8uavTN9fX06qcQ&s);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+p{
+  font-size: 30px;
+  text-align: center;
+}
+
+h1:hover,p:hover{
+    color: yellow;
+}
+
+/*contact us*/
+.contact{
+  width: 450px;
+  padding: 0;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0.2, 0.2);
+}
+input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+}
+textarea{
+  resize: none;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+}
+#submit{
+  border-radius: 10px;
+  font-size: medium;
+  padding: 10px;
+}
+/*------------------------------------------------------------------------------*/
+
+/*side naviagation*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+/*------------------------------------------------------------------------------*/
+
+/*image primary*/
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%); /* Start off-screen */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Fully visible */
+        opacity: 1;
+    }
+}
+
+img.primary {
+    margin-left: 445px;
+    margin-top: 15px;
+    height: 600px;
+    border-radius: 50%;
+    animation: slideInRight 1.5s ease-out forwards; /* Automatically runs on page load */
+}
+/*------------------------------------------------------------------------------*/
+
+/*profile logo-linkedIn,instagram,github*/
+.myid{
+  text-align: center;
+  font-size: 40px;
+}
+/*------------------------------------------------------------------------------*/
+
+/*dark mode button*/
+#toggle{
+  border: none;
+  background: none;
+  float: right;
+  font-size: 24px;
+}
+/*------------------------------------------------------------------------------*/
+
+/*dark mode*/
+.dark-mode {
+  background-color: black;
+  color: white;
+  background-image: none;
+}
+.dark-mode button{
+  color: white;
+  background: none;
+  border: solid white;
+}
+.dark-mode .contact{
+  border: solid white;
+  border-radius: 20px;
+}
+.dark-mode #scrollUpBtn{
+  background-color: white;
+  color: black;
+}
+.dark-mode #scrollUpBtn:hover{
+  background-color: darkgray;
+  color: black;
+}
+/*------------------------------------------------------------------------------*/
+
+/*scroll to top*/
+#scrollUpBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: skyblue;
+    border: none;
+    border-radius: 50%;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+#scrollUpBtn:hover {
+    background-color: skyblue;
+    color: blue;
+}
+/*------------------------------------------------------------------------------*/
+
+/*tying animation*/
+.typing-container {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 3px solid white; /* Cursor effect */
+    width: 14ch; /* Set to the longest word's length */
+    height: 40px; /* Prevent layout shifts */
+    vertical-align: middle;
+    animation: blinkCursor 1s infinite;
+}
+
+@keyframes blinkCursor {
+    50% { border-color: transparent; }
+}
+/*------------------------------------------------------------------------------*/
+
+/*mobile phone media query*/
+@media screen and (max-width: 600px) {
+    
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .myid {
+        font-size: 30px;
+    }
+    span{
+      margin-right: 360px;
+    }
+    
+    .sidenav {
+        width: 0;
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 25px;
+        padding: 10px 10px;
+    }
+
+    .sidenav .closebtn {
+        font-size: 30px;
+        right: 15px;
+    }
+
+    
+    #toggle{
+        font-size: 30px;
+        margin-bottom: -40px;
+    }
+
+    
+    body {
+        padding: 10px;
+        text-align: center;
+        margin: 0;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    img.primary {
+    width: 300px;
+    height: 450px;
+    margin-left: 1px;
+    margin-top: 15px;
+    border-radius: 50%;
+    animation: slideInRight 1.5s ease-out forwards;
+    }
+    .typing-container {
+        margin: 0 ;
+        text-align: center;
+        font-size: 24px;
+        width: auto;
+    }
+    .contact{
+      padding: 0;
+      margin-left: -50px;
+    }
+}
+/*------------------------------------------------------------------------------*/
+
+</style>
+</head>
+<body>
+  <button id="toggle" onclick="myFunction()"><i class="fa-solid fa-toggle-off"></i></button>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="#About">About</a>
+    <a href="saran-resume.html">Resume</a>
+    <a href="#contact">Contact Me</a>
+</div>
+<div id="main">
+<span class="nav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<h1>T.SARAN</h1><br>
+<p><span class="typing-container" id="typing"></span></p><br>
+<img src="saranphoto3.jpeg" alt="Primary Image" class="primary">
+<br><br><br>
+<h1 id="About">About</h1><br>
+<p>Hi, I am Saran.  I'm a web Developer.<br>
+  I see myself as a cofident person who can overcome among worst and toughest situations.<br>
+  And dare to face the problems with my skills and ideas.<br>On a personal with my  skils and ideas.<br>
+  On a personal front,  I make friends easily and obey superiors.</p>
+</div>
+<br>
+<br>
+<center> 
+<div class="contact" id="contact">
+<h1><b>Contact Us</b></h1><br><br>
+<form action="index.html" method="POST">
+<label for="name">Name:</label><br>
+<input type="text" id="name" placeholder="Enter Name"><br><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email" placeholder="Enter email"><br><br>
+<label for="message">Message:</label><br>
+<textarea placeholder="Enter your message"></textarea><br><br>
+</form>
+</div></center><br><br>
+<div class="myid">
+<a href="https://www.linkedin.com/in/saran-rajan-661937323/"><i class="fa-brands fa-linkedin"></i></a>
+<a href="https://github.com/sarantrajan"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.instagram.com/_saran.thiyagu.22_/"><i class="fa-brands fa-instagram"></i></a>
+</div>
+<script>
+/*navigation button*/
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+/*------------------------------------------------------------------------------*/
+
+/*close navigation when click link*/
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector("a[href='#About']").addEventListener("click", closeNav);
+    document.querySelector("a[href='#contact']").addEventListener("click", closeNav);
+});
+/*------------------------------------------------------------------------------*/
+
+/*dark mode button*/
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+/*------------------------------------------------------------------------------*/
+
+/*scroll up button*/
+window.onscroll = function () {
+var scrollBtn = document.getElementById("scrollUpBtn");
+
+if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block"; // Show button when scrolled down
+} else {
+    scrollBtn.style.display = "none"; // Hide button when at the top
+}
+};
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+}
+/*------------------------------------------------------------------------------*/
+
+/*typing animation*/
+document.addEventListener("DOMContentLoaded", function () {
+    const words = ["Web Designer", "Web Developer", "Freelancer", "Creative Thinker"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById("typing");
+
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        const displayedText = isDeleting 
+            ? currentWord.substring(0, charIndex--) 
+            : currentWord.substring(0, charIndex++);
+
+        typingElement.textContent = displayedText;
+        typingElement.style.width = displayedText.length + "ch"; // Adjust width dynamically
+
+        let typingSpeed = isDeleting ? 100 : 150; // Typing speed
+
+        if (!isDeleting && displayedText === currentWord) {
+            typingSpeed = 1000; // Pause before deleting
+            isDeleting = true;
+        } else if (isDeleting && displayedText === "") {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typingSpeed = 500; // Pause before typing next word
+        }
+
+        setTimeout(typeEffect, typingSpeed);
+    }
+
+    typeEffect(); // Start the typing animation
+});
+</script>
+<button id="scrollUpBtn" onclick="scrollToTop()">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+</body>
+</html>

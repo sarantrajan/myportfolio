@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RESUME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+body{
+    color: black;
+    border: aquamarine;
+    text-align: justify;
+    margin: auto;
+    padding: 10px;
+    height: 100vh;
+    background-image: url(https://media.gettyimages.com/id/2150158640/vector/diamond-layers-abstract-depth-background.jpg?s=612x612&w=0&k=20&c=y2FyzE9ygKZL9h6kE3V11XJCRrBgcHRvc1Wfdgnya8s=);
+    background-size: cover;
+    background-position: center;
+}
+/*table*/
+table{
+    border: 2px solid black;
+    background-color: skyblue;
+    font-size: 20px;
+    padding: 8px;
+}
+th{
+    color: red;
+}
+ul{
+    list-style-type: square;
+    display: inline-block;
+
+}
+ol{
+            
+    list-style-type: lower-roman;
+    display: inline-block;
+}
+/*------------------------------------------------------------------------------*/
+
+/*image*/
+img{
+    border-radius: 18px;
+    padding: 5px;
+    width: 150px;
+    border: 1px solid black;
+}
+/*------------------------------------------------------------------------------*/
+
+/*dark mode button*/
+#toggle{
+    float: right;
+    background: none;
+    border: none;
+}
+/*------------------------------------------------------------------------------*/
+
+/*dark mode*/
+.dark-mode {
+  background-color: black;
+  color: white;
+  background-image: none;
+}
+.dark-mode #toggle{
+  color: white;
+}
+.dark-mode #scrollUpBtn{
+  background-color: white;
+  color: black;
+}
+.dark-mode #scrollUpBtn:hover{
+  background-color: darkgray;
+  color: black;
+}
+/*------------------------------------------------------------------------------*/
+
+/*side navigation*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/*------------------------------------------------------------------------------*/
+
+/*scroll to top*/
+#scrollUpBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: skyblue;
+    border: none;
+    border-radius: 50%;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+#scrollUpBtn:hover {
+    background-color: skyblue;
+    color: blue;
+}
+/*------------------------------------------------------------------------------*/
+
+/*mobile phone media query*/
+@media screen and (max-width: 600px) {
+    /* Adjust heading and paragraph sizes */
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 20px;
+    }
+    span{
+      margin-right: 250px;
+    }
+    /* Adjust navigation for mobile */
+    .sidenav {
+        width: 0;
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 25px;
+        padding: 10px 10px;
+    }
+
+    .sidenav .closebtn {
+        font-size: 30px;
+        right: 15px;
+    }
+
+    /* Ensure button visibility */
+    button {
+        font-size: 20px;
+    }
+ img {
+        display: block;
+        margin: 0 auto;
+        width: 120px; /* Reduce size for mobile */
+    }
+
+    /* Adjust table for better visibility */
+    table {
+        width: 100%;
+        font-size: 14px; /* Reduce font size for mobile */
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+
+    th {
+        font-size: 16px;
+        color: red;
+    }
+}
+/*------------------------------------------------------------------------------*/
+
+</style>
+</head>
+<body>
+    <button id="toggle" onclick="myFunction()"><i class="fa-solid fa-toggle-off"></i></button>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span><br><br>
+    <img src="saranphoto.jpg" alt="photo" style="float: right;"><br>
+  <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="index.html#About">About</a>
+        <a href="saran-resume.html">Resume</a>
+        <a href="index.html#contact">Contact Me</a>
+    </div>
+    <h1>SARAN T</h1>
+    <p><i class="fa-solid fa-phone"></i>8072908856</p>
+    <p><i class="fa-solid fa-envelope"></i>sarantrajan2002@gmail.com</p>
+    <p><i class="fa-solid fa-location-dot"></i>67,Ramarkoil street,Agraharam,Palanganatham,Madurai-625003.</p>
+    <br><hr>
+    <h1>PROFILE</h1>
+    <p>I see myself as a cofident person who can overcome among worst and toughest situations.
+        And dare to face the problems with my skills and ideas.  On a personal with my  skils and ideas.
+        On a personal front.  I make friends easily and obey superiors.</p>
+    <h1>EDUCATIONAL QUALIFICATION</h1>
+    <table border="2px solid black">
+        <tr>
+            <th>Qualification</th>
+            <th>Institution</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>SSLC</td>
+            <td>TVS HSS</td>
+            <td>85%</td>
+        </tr>
+        <tr>
+            <td>HSC</td>
+            <td>TVS HSS</td>
+            <td>63%</td>
+        </tr>
+        <tr>
+            <td>UG (BSC Maths)</td>
+            <td>SOURASHTRA COLLEGE</td>
+            <td>75%</td>
+        </tr>
+        <tr>
+            <td>PG (MCA)</td>
+            <td>MKU</td>
+            <td>pursuing</td>
+        </tr>
+    </table >
+
+    <h1>Skils</h1>
+    <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C,C++</li>
+        <li>Html</li>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>Git & Github</li>
+    </ul>
+    <br>
+    <h1>ACHIEVEMENTS</h1>
+    <ul>
+        <li>Attended two days conference at NIT trichy on the topic "Web Technology"</li>
+        <li>Attended one day seminar at Vinsup technology on the topic "Data Analytics"</li>
+    </ul>
+    <h1>Internship:</h1>
+    <p><b>Portfolio - Mini Internship</b><br>
+    I Developed my personal Portfolio using html, css, javascript at Sharpened Mind Technologies.</p>
+    <h1>Tools Used:</h1>
+    <ul>
+        <li>Eclipse</li>
+        <li>Visual Studio Code</li>
+    </ul>
+    <h1>Qualities</h1>
+    <ul>
+        <li>Time Management</li>
+        <li>Patient</li>
+        <li>Hard Working</li>
+    </ul>
+    <h1>PERSONAL DATA</h1>
+        <p>Fathers Name:  A.Thiyagarajan</p>
+        <p>Age:  22</p>
+        <p>Date of Birth:  22/08/2002</p>
+        <p>Gender:  Male</p>
+        <p>Marital Status:  Single</p>
+        <p>Language Known:  Tamil, English</p>
+    <br>
+    <h1>DECLARATION</h1>
+    <P>I hereby declare that all the informations provided above are true.I
+assure that
+        if i get this job i would do it sincearly.
+    </P>
+    <br>
+    <p>Yours Sincearly</p>
+    <p>T.Saran</p>
+</body>
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+/*scroll up button*/
+window.onscroll = function () {
+var scrollBtn = document.getElementById("scrollUpBtn");
+
+if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block"; // Show button when scrolled down
+} else {
+    scrollBtn.style.display = "none"; // Hide button when at the top
+}
+};
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+}
+/*------------------------------------------------------------------------------*/
+    </script>
+<button id="scrollUpBtn" onclick="scrollToTop()">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+</html>  
