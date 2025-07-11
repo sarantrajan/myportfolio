@@ -1,223 +1,282 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>RESUME</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-*{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-}
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
 
-body{
-    color: black;
-    border: aquamarine;
-    text-align: justify;
-    margin: auto;
-    padding: 10px;
-    height: 100vh;
-    background-image: url(https://media.gettyimages.com/id/2150158640/vector/diamond-layers-abstract-depth-background.jpg?s=612x612&w=0&k=20&c=y2FyzE9ygKZL9h6kE3V11XJCRrBgcHRvc1Wfdgnya8s=);
-    background-size: cover;
-    background-position: center;
-}
-/*table*/
-table{
-    border: 2px solid black;
-    background-color: skyblue;
-    font-size: 20px;
-    padding: 8px;
-}
-th{
-    color: red;
-}
-ul{
-    list-style-type: square;
-    display: inline-block;
+        body {
+            color: black;
+            border: aquamarine;
+            text-align: justify;
+            margin: auto;
+            padding: 10px;
+            height: 100vh;
+            background-image: url(https://media.gettyimages.com/id/2150158640/vector/diamond-layers-abstract-depth-background.jpg?s=612x612&w=0&k=20&c=y2FyzE9ygKZL9h6kE3V11XJCRrBgcHRvc1Wfdgnya8s=);
+            background-size: cover;
+            background-position: center;
+        }
 
-}
-ol{
-            
-    list-style-type: lower-roman;
-    display: inline-block;
-}
-/*------------------------------------------------------------------------------*/
+        /*table*/
+        table {
+            border: 2px solid black;
+            background-color: skyblue;
+            font-size: 20px;
+            padding: 8px;
+        }
 
-/*image*/
-img{
-    border-radius: 18px;
-    padding: 5px;
-    width: 150px;
-    border: 1px solid black;
-    float: right;
-}
-/*------------------------------------------------------------------------------*/
+        th {
+            color: red;
+        }
 
-/*dark mode button*/
-#toggle{
-    float: right;
-    background: none;
-    border: none;
-}
-/*------------------------------------------------------------------------------*/
+        ul {
+            list-style-type: square;
+            display: inline-block;
 
-/*dark mode*/
-.dark-mode {
-  background-color: black;
-  color: white;
-  background-image: none;
-}
-.dark-mode #toggle{
-  color: white;
-}
-.dark-mode #scrollUpBtn{
-  background-color: white;
-  color: black;
-}
-.dark-mode #scrollUpBtn:hover{
-  background-color: darkgray;
-  color: black;
-}
-/*------------------------------------------------------------------------------*/
+        }
 
-/*side navigation*/
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 20px;
-}
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+        ol {
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+            list-style-type: lower-roman;
+            display: inline-block;
+        }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-/*------------------------------------------------------------------------------*/
+        /*------------------------------------------------------------------------------*/
 
-/*scroll to top*/
-#scrollUpBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: skyblue;
-    border: none;
-    border-radius: 50%;
-    font-size: 15px;
-    cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
-}
+        /*image*/
+        img {
+            border-radius: 18px;
+            padding: 5px;
+            width: 150px;
+            border: 1px solid black;
+            float: right;
+        }
 
-#scrollUpBtn:hover {
-    background-color: skyblue;
-    color: blue;
-}
-/*------------------------------------------------------------------------------*/
+        /*------------------------------------------------------------------------------*/
 
-/*mobile phone media query*/
-@media screen and (max-width: 600px) {
-    /* Adjust heading and paragraph sizes */
-    h1 {
-        font-size: 30px;
-    }
-    p {
-        font-size: 20px;
-    }
-    span{
-      margin-right: 250px;
-    }
-    /* Adjust navigation for mobile */
-    .sidenav {
-        width: 0;
-        padding-top: 15px;
-    }
+        /*download resume*/
+        .download-btn {
+            display: inline-block;
+            padding: 3px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .sidenav a {
-        font-size: 25px;
-        padding: 10px 10px;
-    }
+        .download-btn:hover {
+            background-color: blue;
+            color: skyblue;
+        }
 
-    .sidenav .closebtn {
-        font-size: 30px;
-        right: 15px;
-    }
+        /*------------------------------------------------------------------------------*/
 
-    /* Ensure button visibility */
-    button {
-        font-size: 20px;
-    }
- img {
-        display: block;
-        margin: 0 auto;
-        width: 120px; /* Reduce size for mobile */
-    }
+        /*dark mode button*/
+        #toggle {
+            float: right;
+            background: none;
+            border: none;
+        }
 
-    /* Adjust table for better visibility */
-    table {
-        width: 100%;
-        font-size: 14px; /* Reduce font size for mobile */
-        border-collapse: collapse;
-    }
+        /*------------------------------------------------------------------------------*/
 
-    th, td {
-        padding: 5px;
-        text-align: center;
-    }
+        /*dark mode*/
+        .dark-mode {
+            background-color: black;
+            color: white;
+            background-image: none;
+        }
 
-    th {
-        font-size: 16px;
-        color: red;
-    }
-}
-/*------------------------------------------------------------------------------*/
+        .dark-mode #toggle {
+            color: white;
+        }
 
-</style>
+        .dark-mode #scrollUpBtn {
+            background-color: white;
+            color: black;
+        }
+
+        .dark-mode #scrollUpBtn:hover {
+            background-color: darkgray;
+            color: black;
+        }
+
+        .dark-mode .download-btn {
+            display: inline-block;
+            padding: 3px;
+            background-color: white;
+            color: black;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .dark-mode .download-btn:hover {
+            background-color: grey;
+            color: black;
+        }
+        /*------------------------------------------------------------------------------*/
+
+        /*side navigation*/
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /*------------------------------------------------------------------------------*/
+
+        /*scroll to top*/
+        #scrollUpBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            color: skyblue;
+            border: none;
+            border-radius: 50%;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        #scrollUpBtn:hover {
+            background-color: skyblue;
+            color: blue;
+        }
+
+        /*------------------------------------------------------------------------------*/
+
+        /*mobile phone media query*/
+        @media screen and (max-width: 600px) {
+
+            /* Adjust heading and paragraph sizes */
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            span {
+                margin-right: 250px;
+            }
+
+            /* Adjust navigation for mobile */
+            .sidenav {
+                width: 0;
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 25px;
+                padding: 10px 10px;
+            }
+
+            .sidenav .closebtn {
+                font-size: 30px;
+                right: 15px;
+            }
+
+            /* Ensure button visibility */
+            button {
+                font-size: 20px;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 120px;
+                /* Reduce size for mobile */
+            }
+
+            /* Adjust table for better visibility */
+            table {
+                width: 100%;
+                font-size: 14px;
+                /* Reduce font size for mobile */
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                padding: 5px;
+                text-align: center;
+            }
+
+            th {
+                font-size: 16px;
+                color: red;
+            }
+        }
+
+        /*------------------------------------------------------------------------------*/
+    </style>
 </head>
+
 <body>
     <button id="toggle" onclick="myFunction()"><i class="fa-solid fa-toggle-off"></i></button>
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span><br><br>
     <img src="{{ url_for('static', filename='images/saranphoto.jpg') }}" alt="Resume Photo">
+    <a href="{{ url_for('static', filename='saran_resume.pdf') }}" download="T.Saran_Resume.pdf" class="download-btn">
+        📄 Download Resume
+    </a>
+
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="{{ url_for('index') }}">Home</a>
         <a href="{{ url_for('index') }}#About">About</a>
         <a href="{{ url_for('resume') }}">Resume</a>
         <a href="{{ url_for('index') }}#contact">Contact Me</a>
-    </div>    
+    </div>
     <h1>SARAN T</h1>
-    <p><i class="fa-solid fa-phone"></i>8072908856</p>
-    <p><i class="fa-solid fa-envelope"></i>sarantrajan2002@gmail.com</p>
-    <p><i class="fa-solid fa-location-dot"></i>67,Ramarkoil street,Agraharam,Palanganatham,Madurai-625003.</p>
-    <br><hr>
+    <p><i class="fa-solid fa-phone"></i> 8072908856</p>
+    <p><i class="fa-solid fa-envelope"></i> sarantrajan2002@gmail.com</p>
+    <p><i class="fa-solid fa-location-dot"></i> 3, EB Main Road, Pykara, Madurai - 625004.</p>
+    <br>
+    <hr>
     <h1>PROFILE</h1>
-    <p>I see myself as a cofident person who can overcome among worst and toughest situations.
-        And dare to face the problems with my skills and ideas.  On a personal with my  skils and ideas.
-        On a personal front.  I make friends easily and obey superiors.</p>
+    <p>Self motivated Web Developer with a strong foundation in front-end technologies and back-end Development using
+        Python(Flask) and MySQL. Quick learner, passionate about building responsive web applications and solving
+        real-world problems withh efficient code.</p>
     <h1>EDUCATIONAL QUALIFICATION</h1>
     <table border="2px solid black">
         <tr>
@@ -227,67 +286,74 @@ img{
         </tr>
         <tr>
             <td>SSLC</td>
-            <td>TVS HSS</td>
+            <td>TVS Sundaram Hr Sec School</td>
             <td>85%</td>
         </tr>
         <tr>
             <td>HSC</td>
-            <td>TVS HSS</td>
+            <td>TVS Sundaram Hr Sec School</td>
             <td>63%</td>
         </tr>
         <tr>
-            <td>UG (BSC Maths)</td>
-            <td>SOURASHTRA COLLEGE</td>
+            <td>UG (B.Sc Maths)</td>
+            <td>Sourashtra College</td>
             <td>75%</td>
         </tr>
         <tr>
             <td>PG (MCA)</td>
-            <td>MKU</td>
-            <td>pursuing</td>
+            <td>Madurai Kamaraj University</td>
+            <td>71%</td>
         </tr>
-    </table >
+    </table>
 
+    <h1>PROJECTS</h1>
+    <p><b>Personal Portfolio Website</b><br>
+        Developed a resposive portfolio website using HTML, CSS and JAVASCRIPT to showcase projects and skills.
+        Integrated smooth scroll, animations, and interactive section to improve user experience.</p>
+    <ul>
+        <li>Utilized HTML, CSS, and JAVASCRIPT for front-end development.</li>
+        <li>Designed a responsive and user-friendly interface.</li>
+        <li>Implemented interactive elements to enhance user experience.</li>
+    </ul>
+    <p><b>Crop Recommedatin System</b><br>
+        Built a Flask Web App using Random Forest to recommed crops based on real-time weather and soil data via API's.
+        Integrated MySQL for data storage and implemented REST APT calls on OpenWeatherMap and SoilGrids.</p>
+    <ul>
+        <li>Built a Flask-based web app using Random Forest.</li>
+        <li>Predicted suitable crops from real-time environmental data via API's.</li>
+        <li>Integrated with MySQL.</li>
+    </ul>
+
+
+    <h1>INTERNSHIP</h1>
+    <p><b>Portfolio - Mini Internship</b><br>
+        I Developed my personal Portfolio using html, css, javascript at Sharpened Mind Technologies.</p>
+    <p><b>Web Development - Feb 2025 to Apr 2025</b><br>
+        Redesign the website using forntend technologies.<br>
+        Performed SEO taks using SEO Power Suite(site audit, backlink generation, blog listing).<br>
+        Gained knowledge in Meta and Google Ads.</p>
     <h1>Skils</h1>
     <ul>
-        <li>Python</li>
-        <li>Java</li>
-        <li>C,C++</li>
         <li>Html</li>
         <li>Css</li>
         <li>Javascript</li>
+        <li>Python</li>
+        <li>MySQL</li>
         <li>Git & Github</li>
     </ul>
     <br>
-    <h1>ACHIEVEMENTS</h1>
+    <h1>CERTIFICATIONS</h1>
     <ul>
         <li>Attended two days conference at NIT trichy on the topic "Web Technology"</li>
         <li>Attended one day seminar at Vinsup technology on the topic "Data Analytics"</li>
+        <li>Attended the Workshop at Madurai Kamaraj University RUSA LAB on the topic "Exploring Machine Learning
+            Algorithms Using Python Workshop"</li>
     </ul>
-    <h1>Internship:</h1>
-    <p><b>Portfolio - Mini Internship</b><br>
-    I Developed my personal Portfolio using html, css, javascript at Sharpened Mind Technologies.</p>
-    <h1>Tools Used:</h1>
-    <ul>
-        <li>Eclipse</li>
-        <li>Visual Studio Code</li>
-    </ul>
-    <h1>Qualities</h1>
-    <ul>
-        <li>Time Management</li>
-        <li>Patient</li>
-        <li>Hard Working</li>
-    </ul>
-    <h1>PERSONAL DATA</h1>
-        <p>Fathers Name:  A.Thiyagarajan</p>
-        <p>Age:  22</p>
-        <p>Date of Birth:  22/08/2002</p>
-        <p>Gender:  Male</p>
-        <p>Marital Status:  Single</p>
-        <p>Language Known:  Tamil, English</p>
-    <br>
+
+
     <h1>DECLARATION</h1>
     <P>I hereby declare that all the informations provided above are true.I
-assure that
+        assure that
         if i get this job i would do it sincearly.
     </P>
     <br>
@@ -296,32 +362,33 @@ assure that
 </body>
 <script>
     function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.width = "250px";
     }
-    
+
     function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mySidenav").style.width = "0";
     }
     function myFunction() {
-       var element = document.body;
-       element.classList.toggle("dark-mode");
+        var element = document.body;
+        element.classList.toggle("dark-mode");
     }
-/*scroll up button*/
-window.onscroll = function () {
-var scrollBtn = document.getElementById("scrollUpBtn");
+    /*scroll up button*/
+    window.onscroll = function () {
+        var scrollBtn = document.getElementById("scrollUpBtn");
 
-if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollBtn.style.display = "block"; // Show button when scrolled down
-} else {
-    scrollBtn.style.display = "none"; // Hide button when at the top
-}
-};
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
-}
-/*------------------------------------------------------------------------------*/
-    </script>
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.style.display = "block"; // Show button when scrolled down
+        } else {
+            scrollBtn.style.display = "none"; // Hide button when at the top
+        }
+    };
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+    }
+    /*------------------------------------------------------------------------------*/
+</script>
 <button id="scrollUpBtn" onclick="scrollToTop()">
-<i class="fa-solid fa-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up"></i>
 </button>
-</html>  
+
+</html>
